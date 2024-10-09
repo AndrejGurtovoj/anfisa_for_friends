@@ -11,7 +11,7 @@ git clone https://github.com/AndrejGurtovoj/anfisa_for_friends.git
 ```
 
 ```
-cd anfisa2sprint
+cd anfisa_for_friends
 ```
 
 Cоздать и активировать виртуальное окружение:
