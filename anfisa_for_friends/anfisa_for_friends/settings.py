@@ -14,6 +14,7 @@ INSTALLED_APPS = [
     'homepage.apps.HomepageConfig',
     'ice_cream.apps.IceCreamConfig',
     'about.apps.AboutConfig',
+    'contest.apps.ContestConfig',
     'core.apps.CoreConfig',
     'django.contrib.admin',
     'django.contrib.auth',
