@@ -2,6 +2,7 @@ from django.shortcuts import render
 
 from ice_cream.models import IceCream
 
+
 def index(request):
     template_name = 'homepage/index.html'
     ice_cream_list = IceCream.objects.values(

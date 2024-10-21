@@ -6,7 +6,7 @@
 {% block content %}
   <h1 class="pb-2 mb-0">Каталог мороженого</h1>
   <div class="row">
-    {% for ice_cream in ice_cream_list %}
+    {% for ice_cream in page_obj %}
       {% ifchanged %}
         <div class="row mt-5" id="{{ ice_cream.category.slug }}">
           <div class="col-12">
@@ -17,4 +17,5 @@
       {% include "includes/ice_cream_card.html" %}
     {% endfor %}
   </div>
+  {% include "includes/paginator.html" %}
 {% endblock %}

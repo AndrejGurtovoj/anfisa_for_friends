@@ -4,7 +4,7 @@
 {% endblock %}
 {% block content %}
   <h1>Список заявок на конкурс</h1>
-  {% for proposal in contest_proposals %}
+  {% for proposal in page_obj %}
     <div>
       {{ proposal.id }}, {{ proposal.title }}, 
       {{ proposal.price }}, {{ proposal.description }}, 
@@ -15,4 +15,5 @@
       <a href="{% url 'contest:delete' proposal.id %}">Удалить заявку</a>
     </div>
   {% endfor %}
+  {% include "includes/paginator.html" %}
 {% endblock %}

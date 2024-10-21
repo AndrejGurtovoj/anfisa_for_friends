@@ -1,4 +1,5 @@
 from django.shortcuts import get_object_or_404, render, redirect
+from django.core.paginator import Paginator
 
 from .forms import ContestForm
 from .models import Contest
@@ -28,5 +29,8 @@ def delete_proposal(request, pk):
 
 def proposal_list(request):
     contest_proposals = Contest.objects.order_by('id')
-    context = {'contest_proposals': contest_proposals}
+    paginator = Paginator(contest_proposals, 10)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+    context = {'contest_proposals': contest_proposals, 'page_obj': page_obj}
     return render(request, 'contest/contest_list.html', context)
