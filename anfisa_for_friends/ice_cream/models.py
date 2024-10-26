@@ -32,7 +32,7 @@ class Topping(PublishedModel):
 
 class Wrapper(PublishedModel):
     title = models.CharField(max_length=256, verbose_name='Название')
-    help_text='Уникальное название обёртки, не более 256 символов'
+    help_text = 'Уникальное название обёртки, не более 256 символов'
 
     class Meta:
         verbose_name = 'обёртка'
@@ -44,7 +44,7 @@ class Wrapper(PublishedModel):
 
 class IceCream(PublishedModel):
     is_on_main = models.BooleanField(default=False, verbose_name='На главную')
-    title = models.CharField(max_length=256,verbose_name='Название')
+    title = models.CharField(max_length=256, verbose_name='Название')
     description = models.TextField(verbose_name='Описание')
     output_order = models.PositiveSmallIntegerField(
         default=100,

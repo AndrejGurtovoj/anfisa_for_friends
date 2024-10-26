@@ -29,7 +29,7 @@ def delete_proposal(request, pk):
 
 def proposal_list(request):
     contest_proposals = Contest.objects.order_by('id')
-    paginator = Paginator(contest_proposals, 10)
+    paginator = Paginator(contest_proposals, 5)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
     context = {'contest_proposals': contest_proposals, 'page_obj': page_obj}

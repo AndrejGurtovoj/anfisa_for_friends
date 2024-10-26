@@ -122,6 +122,8 @@
     "is_on_main": true,
     "title": "Золотое мороженое",
     "description": "Шарики таитянского ванильного мороженого, шоколад “Amedei Porcelana” и груда экзотических фруктов. Всё это покрыто золотой фольгой, её тоже полагается съесть.",
+    "output_order": 100,
+    "price": "2.00",
     "wrapper": 3,
     "category": 1,
     "toppings": [
@@ -137,6 +139,8 @@
     "is_on_main": false,
     "title": "Готическое мороженое",
     "description": "Чёрное мороженое в чёрном вафельном рожке для true black goths. Состав: сливочное мороженое, миндаль, активированный уголь, чернота, мрак, отрицание.",
+    "output_order": 100,
+    "price": "4.00",
     "wrapper": null,
     "category": 1,
     "toppings": [
@@ -153,6 +157,8 @@
     "is_on_main": false,
     "title": "Мороженое паста карбонара",
     "description": "Порция макарон под тёмным соусом. Паста — из ванильного мороженого, продавленного через пресс с дырочками, соус — ликёр с орехами. Buon appetito!",
+    "output_order": 100,
+    "price": "4.00",
     "wrapper": null,
     "category": 1,
     "toppings": [
@@ -170,6 +176,8 @@
     "is_on_main": true,
     "title": "Люминесцентное мороженое",
     "description": "Сливочное мороженое с белками, активированными кальцием. Светится, если облизнуть. Можно подавать в тыкве на Хэллоуин или кормить собаку Баскервилей.",
+    "output_order": 100,
+    "price": "5.00",
     "wrapper": 2,
     "category": 1,
     "toppings": [
@@ -185,6 +193,8 @@
     "is_on_main": false,
     "title": "Жареное мороженое",
     "description": "Шарики мороженого обваливают яйце и в панировке, сильно замораживают и быстро обжаривают в растительном масле. Едят быстро.",
+    "output_order": 100,
+    "price": "6.00",
     "wrapper": null,
     "category": 1,
     "toppings": [
@@ -204,6 +214,8 @@
     "is_on_main": false,
     "title": "Луковое мороженое",
     "description": "Обжаренный на оливковом масле лук, сахар, молоко, сливки, яйцо и ванилин — нет, это не добавка к бифштексу, а отличное лакомство.",
+    "output_order": 100,
+    "price": "4.00",
     "wrapper": null,
     "category": 1,
     "toppings": [
@@ -219,6 +231,8 @@
     "is_on_main": false,
     "title": "Морской коктейль",
     "description": "Мороженое как мороженое, но в составе — водоросли и икра морской рыбы. Многим нравится.",
+    "output_order": 100,
+    "price": "2.00",
     "wrapper": null,
     "category": 1,
     "toppings": [
@@ -234,6 +248,8 @@
     "is_on_main": true,
     "title": "Томатное мороженое",
     "description": "В СССР делали и томатное мороженое тоже. Вкус специфический.",
+    "output_order": 100,
+    "price": "3.00",
     "wrapper": 1,
     "category": 2,
     "toppings": [
@@ -249,6 +265,8 @@
     "is_on_main": false,
     "title": "Фруктово-ягодное мороженое",
     "description": "Сырьё: сливки, пахта, фрукты и ягоды в свежем виде, яичный порошок из куриных яиц, патока карамельная. Общее количество микробов в 1 мл мороженого: не более 250 тыс.",
+    "output_order": 100,
+    "price": "2.00",
     "wrapper": null,
     "category": 2,
     "toppings": [
@@ -264,6 +282,8 @@
     "is_on_main": true,
     "title": "Эскимо",
     "description": "Неустаревающая классика: мороженое на палочке, с шоколадной глазурью. Это мороженое-квест: съесть и не уронить!",
+    "output_order": 100,
+    "price": "5.00",
     "wrapper": null,
     "category": 2,
     "toppings": [
@@ -280,6 +300,8 @@
     "is_on_main": false,
     "title": "Классический пломбир",
     "description": "Настоящее мороженое, для истинных ценителей вкуса. Если на столе появляется пломбир — это не надолго.",
+    "output_order": 100,
+    "price": "3.00",
     "wrapper": 4,
     "category": 2,
     "toppings": [
@@ -287,6 +309,16 @@
       5,
       6
     ]
+  }
+},
+{
+  "model": "contest.contest",
+  "pk": 1,
+  "fields": {
+    "title": "Хлебное",
+    "description": "Хлеб\r\nмолоко",
+    "price": 12,
+    "comment": "хлеб"
   }
 },
 {
@@ -897,6 +929,42 @@
   }
 },
 {
+  "model": "auth.permission",
+  "pk": 41,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 11,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 42,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 11,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 43,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 11,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 44,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 11,
+    "codename": "view_session"
+  }
+},
+{
   "model": "auth.user",
   "pk": 2,
   "fields": {
@@ -912,6 +980,94 @@
     "date_joined": "2022-08-16T00:07:14.046Z",
     "groups": [],
     "user_permissions": []
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "ice_cream",
+    "model": "category"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "ice_cream",
+    "model": "topping"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "ice_cream",
+    "model": "wrapper"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "ice_cream",
+    "model": "icecream"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "contest",
+    "model": "contest"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "auth",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 10,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 11,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
   }
 },
 {

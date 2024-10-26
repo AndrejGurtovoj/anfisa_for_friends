@@ -9,6 +9,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
+EMAIL_FILE_PATH = BASE_DIR / 'sent_emails'
 
 INSTALLED_APPS = [
     'homepage.apps.HomepageConfig',
@@ -100,5 +102,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     BASE_DIR / 'static_dev',
     ]
+
+LOGIN_REDIRECT_URL = 'homepage:index'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
