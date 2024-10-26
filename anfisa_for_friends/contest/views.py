@@ -10,7 +10,11 @@ def proposal(request, pk=None):
         instance = get_object_or_404(Contest, pk=pk)
     else:
         instance = None
-    form = ContestForm(request.POST or None, instance=instance)
+    form = ContestForm(
+        request.POST or None,
+        files=request.FILES or None,
+        instance=instance
+    )
     if form.is_valid():
         form.save()
     context = {'form': form, 'instance': instance}

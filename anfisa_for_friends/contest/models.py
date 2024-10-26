@@ -14,6 +14,9 @@ class Contest(models.Model):
         blank=True,
         verbose_name='Комментарий'
     )
+    image = models.ImageField(
+        'Изображение', upload_to='images', blank=True
+    )
 
     def __str__(self):
         return self.title
