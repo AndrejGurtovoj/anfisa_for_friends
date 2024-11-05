@@ -5,7 +5,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-oy%f52n92s=%3&b3dh&h)f(b4ag^_z*&3w+ooo!sy-g=449bwn'
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1',]
 
@@ -69,6 +69,7 @@ DATABASES = {
     }
 }
 
+CSRF_FAILURE_VIEW = 'core.views.csrf_failure'
 
 AUTH_PASSWORD_VALIDATORS = [
     {
