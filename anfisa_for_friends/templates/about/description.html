@@ -5,12 +5,17 @@
 {% block content %}
   <h1 class="pb-2 mb-0">О проекте</h1>
   <p>
+  <div class="row">
+  <div class="col-3">
     Каталог экзотических сортов мороженого.
   </p>
   <p>
     Мы проводим конкурс рецептов мороженого среди наших друзей.
   </p>
   <p>
-    Количество поданных заявок: {{ total_count }}
+    Количество поданных заявок:
   </p>
+  <div class="col-9">
+    <div class="display-1">{{ total_count }}</div>
+  </div>
 {% endblock %}
