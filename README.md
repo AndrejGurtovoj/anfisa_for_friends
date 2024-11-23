@@ -69,3 +69,6 @@ Linux/macOS
 ```
 python3 manage.py runserver
 ```
+### Автор
+
+- __Андрей Гуртовой__
